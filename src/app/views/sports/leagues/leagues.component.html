@@ -1,0 +1,105 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Striped Table
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>S#</th>
+              <th>League</th>
+              <th>Year Formed</th>
+              <th>First Event Date</th>
+              <th>Gender</th>
+              <th>Country</th>
+              <th>Website</th>
+              <th>Players</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let league of leagues; index as i">
+              <td>
+                {{i + 1}}
+              </td>
+              <td>
+                {{league.strLeague}}
+              </td>
+              <td>
+                {{league.intFormedYear}}
+              </td>
+              <td>
+                {{league.dateFirstEvent}}
+              </td>
+              <td>
+                {{league.strGender}}
+              </td>
+              <td>
+                {{league.strCountry}}
+              </td>
+              <td>
+                <a [href]="league.strWebsite">{{league.strWebsite}}</a>
+              </td>
+              <td class="table-icon">
+                <a><i class="fa fa-info fa-lg"></i></a>
+              </td>
+            </tr>
+            <!--<tr>
+              <td>Yiorgos Avraamu</td>
+              <td>2012/01/01</td>
+              <td>Member</td>
+              <td>
+                <span class="badge badge-success">Active</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Avram Tarasios</td>
+              <td>2012/02/01</td>
+              <td>Staff</td>
+              <td>
+                <span class="badge badge-danger">Banned</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Quintin Ed</td>
+              <td>2012/02/01</td>
+              <td>Admin</td>
+              <td>
+                <span class="badge badge-secondary">Inactive</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Enéas Kwadwo</td>
+              <td>2012/03/01</td>
+              <td>Member</td>
+              <td>
+                <span class="badge badge-warning">Pending</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Agapetus Tadeáš</td>
+              <td>2012/01/21</td>
+              <td>Staff</td>
+              <td>
+                <span class="badge badge-success">Active</span>
+              </td>
+            </tr>-->
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
